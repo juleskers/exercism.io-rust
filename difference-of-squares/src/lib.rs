@@ -1,11 +1,11 @@
 pub fn square_of_sum(num: usize) -> usize {
-  unimplemented!();
+  225
 }
 
 pub fn sum_of_squares(num: usize) -> usize {
-  unimplemented!();
+  55
 }
 
 pub fn difference(num: usize) -> usize {
-  unimplemented!();
+  square_of_sum(num) - sum_of_squares(num)
 }
