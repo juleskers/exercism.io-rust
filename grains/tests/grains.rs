@@ -6,37 +6,31 @@ fn square_one() {
 }
 
 #[test]
-#[ignore]
 fn square_two() {
     assert_eq!(grains::square(2), 2);
 }
 
 #[test]
-#[ignore]
 fn square_three() {
     assert_eq!(grains::square(3), 4);
 }
 
 #[test]
-#[ignore]
 fn square_four() {
     assert_eq!(grains::square(4), 8);
 }
 
 #[test]
-#[ignore]
 fn square_sixteen() {
     assert_eq!(grains::square(16), 32_768);
 }
 
 #[test]
-#[ignore]
 fn square_thirty_two() {
     assert_eq!(grains::square(32), 2_147_483_648);
 }
 
 #[test]
-#[ignore]
 fn square_sixty_four() {
     assert_eq!(grains::square(64), 9_223_372_036_854_775_808);
 }
