@@ -36,14 +36,12 @@ fn square_sixty_four() {
 }
 
 #[test]
-#[ignore]
 #[should_panic(expected = "Square must be between 1 and 64")]
 fn square_zero_panics() {
     grains::square(0);
 }
 
 #[test]
-#[ignore]
 #[should_panic(expected = "Square must be between 1 and 64")]
 fn square_sixty_five_panics() {
     grains::square(65);
