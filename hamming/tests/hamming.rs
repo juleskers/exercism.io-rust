@@ -26,13 +26,11 @@ fn test_larger_distance() {
 }
 
 #[test]
-#[ignore]
 fn test_first_string_is_longer() {
     assert!(hamming::hamming_distance("AAA", "AA").is_err());
 }
 
 #[test]
-#[ignore]
 fn test_second_string_is_longer() {
     assert!(hamming::hamming_distance("A", "AA").is_err());
 }
