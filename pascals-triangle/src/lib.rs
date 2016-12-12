@@ -5,7 +5,7 @@ pub struct PascalsTriangle {
 impl PascalsTriangle {
     pub fn new(row_count: u32) -> Self {
         PascalsTriangle {
-            row_buffer: Vec::new()
+            row_buffer: Vec::with_capacity(row_count as usize)
         }
     }
 
