@@ -4,9 +4,11 @@ pub struct PascalsTriangle {
 
 impl PascalsTriangle {
     pub fn new(row_count: u32) -> Self {
-        PascalsTriangle {
+        let pt = PascalsTriangle {
             row_buffer: Vec::with_capacity(row_count as usize)
-        }
+        };
+        
+        pt
     }
 
     pub fn rows(&self) -> Vec<Vec<u32>> {
