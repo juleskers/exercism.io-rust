@@ -10,7 +10,6 @@ fn no_rows() {
 }
 
 #[test]
-#[ignore]
 fn one_row() {
     let pt = PascalsTriangle::new(1);
     let expected: Vec<Vec<u32>> = vec![vec![1]];
