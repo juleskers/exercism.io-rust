@@ -14,19 +14,14 @@ impl PascalsTriangle {
             let mut new_row = Vec::with_capacity(i as usize); // It's a triangle: each row is as long as it is down
             
             // fill the current row
-            match i {
-               // first and last item of a row are always '1', because they're on the edge, with an "n/a" and a "1" above them
-               1         => new_row.push(1),
-               // DWIM error: "row_count => .." doesn't Do What I Mean: doesn't compare against parameter row_count,
-               // instead matches any value and binds that to a new "row_count", shadowing the parameter of the same name
-               // update: rust forums to the rescue on why this is:
-               // https://internals.rust-lang.org/t/matching-variable-values/405
-               // also provides the solution: write a match guard
-               _ if i==row_count => new_row.push(1),
-               // all other rows are sum of previous elements above them
-               // no longer a COMPILER ERROR: this is unreachable, because everything else is already captured into the row_count branch
-               // Hats off to rustc exhaustiveness-checking!
-               _ => unimplemented!(),
+            for j in 1..i+1 {
+                match j {
+                   // first and last item of a row are always '1', because they're on the edge, with an "n/a" and a "1" above them
+                   1         => new_row.push(1),
+                   _ if i==row_count => new_row.push(1),
+                   // all other rows are sum of previous elements above them
+                   _ => unimplemented!(),
+                }
             }
             
             rb.push(new_row)
