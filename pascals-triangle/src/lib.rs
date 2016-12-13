@@ -3,15 +3,15 @@ pub struct PascalsTriangle {
 }
 
 impl PascalsTriangle {
-    pub fn new(row_count: usize) -> Self {
+    pub fn new(row_count: u32) -> Self {
         // prepare the Pascal triangle
         // We know how many rows we'll have, save some Vec re-allocations with that knowledge
-        let mut rb = Vec::with_capacity(row_count);
+        let mut rb = Vec::with_capacity(row_count as usize);
 
         // Fill the rows, one by one
         for i in 1..row_count+1 {
             // prepare the current row
-            let mut new_row = Vec::with_capacity(i); // It's a triangle: each row is as long as it is down
+            let mut new_row = Vec::with_capacity(i as usize); // It's a triangle: each row is as long as it is down
             
             // fill the current row
             match i {
