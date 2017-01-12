@@ -18,7 +18,7 @@ impl PascalsTriangle {
                 match j {
                     // first and last item of a row are always '1', because they're on the edge, with an "n/a" and a "1" above them
                     1         => new_row.push(1),
-                    _ if i==row_count => new_row.push(1),
+                    _ if j==i => new_row.push(1),
                     // all other rows are sum of previous elements above them
                     _ => unimplemented!(),
                 }
