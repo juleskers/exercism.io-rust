@@ -24,7 +24,6 @@ fn two_rows() {
 }
 
 #[test]
-#[ignore]
 fn three_rows() {
     let pt = PascalsTriangle::new(3);
     let expected: Vec<Vec<u32>> = vec![vec![1], vec![1, 1], vec![1, 2, 1]];

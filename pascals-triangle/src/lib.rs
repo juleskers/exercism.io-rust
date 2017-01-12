@@ -20,7 +20,11 @@ impl PascalsTriangle {
                     1         => new_row.push(1),
                     _ if j==i => new_row.push(1),
                     // all other rows are sum of previous elements above them
-                    _ => unimplemented!(),
+                    _ => {
+                        let prev_row = &rb[(i-2) as usize];
+                        let sum = prev_row[(j-2) as usize] + prev_row[(j-1) as usize];
+                        new_row.push(sum);
+                    },
                 }
             }
             
