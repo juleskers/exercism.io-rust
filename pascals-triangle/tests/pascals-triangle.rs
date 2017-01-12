@@ -31,7 +31,6 @@ fn three_rows() {
 }
 
 #[test]
-#[ignore]
 fn last_of_four_rows() {
     let pt = PascalsTriangle::new(4);
     let expected: Vec<u32> = vec![1, 3, 3, 1];
