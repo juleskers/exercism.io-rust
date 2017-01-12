@@ -8,7 +8,6 @@ fn multiples_one() {
 }
 
 #[test]
-#[ignore]
 fn multiples_two() {
     assert_eq!(3, sum_of_multiples(4, &vec![3, 5]))
 }
