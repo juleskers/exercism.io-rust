@@ -12,7 +12,7 @@ impl PascalsTriangle {
         for i in 1..row_count+1 {
             // prepare the current row
             let mut new_row = Vec::with_capacity(i as usize); // It's a triangle: each row is as long as it is down
-            
+
             // fill the current row
             for j in 1..i+1 {
                 match j {
@@ -27,7 +27,7 @@ impl PascalsTriangle {
                     },
                 }
             }
-            
+
             rb.push(new_row)
         }
 
