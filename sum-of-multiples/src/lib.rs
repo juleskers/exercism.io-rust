@@ -14,10 +14,7 @@ pub fn sum_of_multiples(limit: u32, to_multiply: &[u32]) -> u32 {
 
   let mut all_multiples: HashSet<u32> = HashSet::new();
   for r in 1..repeat_limit+1 {
-    for m in to_multiply {
-      let candidate = r*m;
-      all_multiples.insert(candidate);
-    }
+    all_multiples.extend(to_multiply.iter().map(|m| &r*m));
   }
   let filtered_multiples = all_multiples.into_iter().filter(|e| e < &limit);
 
