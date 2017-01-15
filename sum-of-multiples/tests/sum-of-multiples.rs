@@ -18,19 +18,16 @@ fn multiples_three() {
 }
 
 #[test]
-#[ignore]
 fn multiples_four() {
     assert_eq!(2318, sum_of_multiples(100, &vec![3, 5]))
 }
 
 #[test]
-#[ignore]
 fn multiples_five() {
     assert_eq!(233168, sum_of_multiples(1000, &vec![3, 5]))
 }
 
 #[test]
-#[ignore]
 fn multiples_six() {
     assert_eq!(51, sum_of_multiples(20, &vec![7, 13, 17]))
 }
@@ -41,25 +38,21 @@ fn multiples_seven() {
 }
 
 #[test]
-#[ignore]
 fn multiples_eight() {
     assert_eq!(4419, sum_of_multiples(150, &vec![5, 6, 8]))
 }
 
 #[test]
-#[ignore]
 fn multiples_nine() {
     assert_eq!(275, sum_of_multiples(51, &vec![5, 25]))
 }
 
 #[test]
-#[ignore]
 fn multiples_ten() {
     assert_eq!(2203160, sum_of_multiples(10000, &vec![43, 47]))
 }
 
 #[test]
-#[ignore]
 fn multiples_eleven() {
     assert_eq!(4950, sum_of_multiples(100, &vec![1]))
 }
