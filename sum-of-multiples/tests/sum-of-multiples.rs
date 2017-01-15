@@ -18,6 +18,7 @@ fn multiples_three() {
 }
 
 #[test]
+#[ignore]
 fn multiples_four() {
     assert_eq!(2318, sum_of_multiples(100, &vec![3, 5]))
 }
@@ -35,7 +36,6 @@ fn multiples_six() {
 }
 
 #[test]
-#[ignore]
 fn multiples_seven() {
     assert_eq!(30, sum_of_multiples(15, &vec![4, 6]))
 }
