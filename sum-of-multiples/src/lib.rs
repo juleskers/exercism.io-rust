@@ -6,12 +6,15 @@ pub fn sum_of_multiples(limit: u32, to_multiply: &[u32]) -> u32 {
   //  to compensate, we filter in a later stage
   let repeat_limit = (limit/to_multiply_max) as u32 + 1; 
 
-  let all_multiples: Vec<u32> = (1..repeat_limit+1).map(|r| {
-    to_multiply.iter().map(|m| m*r)
-  }).collect();
-
-  match to_multiply.iter().filter(|n| n < &&limit ).next() {
-    Some(v) => *v,
-    None    =>  0,
+  let mut all_multiples: Vec<u32> = Vec::new();
+  for r in (1..repeat_limit+1) {
+    for m in to_multiply {
+      let candidate = r*m;
+      if candidate < limit {
+        all_multiples.push(candidate);
+      }
+    }
   }
+
+  all_multiples.iter().sum()
 }
