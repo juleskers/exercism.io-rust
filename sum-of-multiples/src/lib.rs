@@ -1,7 +1,7 @@
 use std::collections::HashSet;
 
 pub fn sum_of_multiples(limit: u32, to_multiply: &[u32]) -> u32 {
-  if to_multiple.is_empty() {
+  if to_multiply.is_empty() {
     return 0;
   }
 
