@@ -14,16 +14,12 @@ pub fn sum_of_multiples(limit: u32, to_multiply: &[u32]) -> u32 {
 
   let mut all_multiples: HashSet<u32> = HashSet::new();
   for r in 1..repeat_limit+1 {
-    println!("repeat {}", r);
     for m in to_multiply {
       let candidate = r*m;
-      println!("  candidate: {}", candidate);
-      if candidate < limit {
-        all_multiples.insert(candidate);
-        println!("    added!");
-      }
+      all_multiples.insert(candidate);
     }
   }
+  let filtered_multiples = all_multiples.into_iter().filter(|e| e < &limit);
 
-  all_multiples.iter().sum()
+  filtered_multiples.into_iter().sum()
 }
