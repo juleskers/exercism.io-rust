@@ -1,6 +1,10 @@
+/// See the full history of this file in my public github repo:
+/// https://github.com/juleskers/exercism.io-rust/blob/master/sum-of-multiples/src/lib.rs
+
 use std::collections::HashSet;
 
 pub fn sum_of_multiples(limit: u32, to_multiply: &[u32]) -> u32 {
+  // sanity test / fail-fast: We need SOMETHING to multiply
   if to_multiply.is_empty() {
     return 0;
   }
@@ -13,7 +17,7 @@ pub fn sum_of_multiples(limit: u32, to_multiply: &[u32]) -> u32 {
 
   let mut all_multiples: HashSet<u32> = HashSet::new();
   for r in 1..repeat_limit+1 {
-    all_multiples.extend(to_multiply.iter().map(|m| &r*m));
+    all_multiples.extend(to_multiply.iter().map(|m| r*m));
   }
   let filtered_multiples = all_multiples.into_iter().filter(|e| e < &limit);
 
