@@ -9,7 +9,7 @@ pub fn sum_of_multiples(limit: u32, to_multiply: &[u32]) -> u32 {
   let repeat_limit = (limit/to_multiply_min) as u32 + 1;
 
   let mut all_multiples: HashSet<u32> = HashSet::new();
-  for r in (1..repeat_limit+1) {
+  for r in 1..repeat_limit+1 {
     println!("repeat {}", r);
     for m in to_multiply {
       let candidate = r*m;
