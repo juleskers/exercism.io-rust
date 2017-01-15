@@ -5,11 +5,10 @@ pub fn sum_of_multiples(limit: u32, to_multiply: &[u32]) -> u32 {
     return 0;
   }
 
+  // Find our iteration limit:
+  //  The highest multiplication-factor below the limit is reached for the smallest number to_multiply.
+  //  as u32 + 1: we round up to make sure we don't accidentally miss a multiple on the edge.
   let to_multiply_min = to_multiply.iter().min().unwrap();
-
-  // as u32 +1: we round up, because a to_multiply lower-than-max
-  //  may stay below the limit while the max goes over the limit.
-  //  to compensate, we filter in a later stage
   let repeat_limit = (limit/to_multiply_min) as u32 + 1;
 
   let mut all_multiples: HashSet<u32> = HashSet::new();
