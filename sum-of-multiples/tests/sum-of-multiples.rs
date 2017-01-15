@@ -58,7 +58,6 @@ fn multiples_eleven() {
 }
 
 #[test]
-#[ignore]
 fn multiples_twelve() {
     assert_eq!(0, sum_of_multiples(10000, &vec![]))
 }

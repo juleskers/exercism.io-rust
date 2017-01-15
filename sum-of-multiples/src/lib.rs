@@ -1,6 +1,10 @@
 use std::collections::HashSet;
 
 pub fn sum_of_multiples(limit: u32, to_multiply: &[u32]) -> u32 {
+  if to_multiple.is_empty() {
+    return 0;
+  }
+
   let to_multiply_min = to_multiply.iter().min().unwrap();
 
   // as u32 +1: we round up, because a to_multiply lower-than-max
