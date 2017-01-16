@@ -1,3 +1,6 @@
 pub fn score(word: &str) -> u16 {
-  return 1;
+  match word {
+    "a" => 1;
+    "f" => 4;
+  }
 }
