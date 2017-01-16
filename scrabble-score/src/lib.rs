@@ -1,7 +1,10 @@
 pub fn score(word: &str) -> u16 {
-  match word.to_lowercase().chars().next().unwrap() {
-    'a' => 1,
-    'f' => 4,
-    _   => unimplemented!(),
+  let mut score = 0;
+  for the_char in word.to_lowercase().chars() {
+    match the_char {
+      'a' => score += 1,
+      'f' => score += 4,
+      _   => unimplemented!(),
+    }
   }
 }

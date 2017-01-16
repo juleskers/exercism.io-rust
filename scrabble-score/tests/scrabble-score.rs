@@ -18,7 +18,6 @@ fn f_is_worth_four() {
 }
 
 #[test]
-#[ignore]
 fn two_one_point_letters_make_a_two_point_word() {
     assert_eq!(score("at"), 2);
 }
