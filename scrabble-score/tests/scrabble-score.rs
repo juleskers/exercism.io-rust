@@ -33,7 +33,6 @@ fn medium_word() {
 }
 
 #[test]
-#[ignore]
 fn longer_words_with_valuable_letters() {
     assert_eq!(score("quirky"), 22);
 }
