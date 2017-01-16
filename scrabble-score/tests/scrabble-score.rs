@@ -23,7 +23,6 @@ fn two_one_point_letters_make_a_two_point_word() {
 }
 
 #[test]
-#[ignore]
 fn three_letter_word() {
     assert_eq!(score("zoo"), 12);
 }
