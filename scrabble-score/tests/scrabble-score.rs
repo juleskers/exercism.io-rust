@@ -28,7 +28,6 @@ fn three_letter_word() {
 }
 
 #[test]
-#[ignore]
 fn medium_word() {
     assert_eq!(score("street"), 6);
 }
