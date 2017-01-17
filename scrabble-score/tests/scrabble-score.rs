@@ -55,5 +55,5 @@ fn empty_words_are_worth_zero() {
 
 #[test]
 fn all_letters_work() {
-    assert_eq(score("abcdefghijklmnopqrstuvwxyz"), 87);
+    assert_eq!(score("abcdefghijklmnopqrstuvwxyz"), 87);
 }
