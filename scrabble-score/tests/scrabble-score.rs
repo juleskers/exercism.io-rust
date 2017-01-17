@@ -38,7 +38,6 @@ fn longer_words_with_valuable_letters() {
 }
 
 #[test]
-#[ignore]
 fn long_mixed_case_word() {
     assert_eq!(score("OxyphenButazone"), 41);
 }
