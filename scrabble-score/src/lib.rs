@@ -8,7 +8,7 @@ pub fn score(word: &str) -> u16 {
       'k' => 5,
       'x' => 8,
       'q'|'z' => 10,
-      _   => unimplemented!(),
+      _   => 0,
     }
   }
   score
