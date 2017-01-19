@@ -57,3 +57,8 @@ fn empty_words_are_worth_zero() {
 fn all_letters_work() {
     assert_eq!(score("abcdefghijklmnopqrstuvwxyz"), 87);
 }
+
+#[test]
+fn single_letter_double_score() {
+    assert_eq!(score("a:double"), 2);
+}
