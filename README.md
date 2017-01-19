@@ -1,4 +1,4 @@
-# exercism.io-rust
+# Learning Rust: a diary in git commits
 My attempts at learning #rust-lang via the exercism.io track
 
 I've been following Rust's development since somewhere in the 0.9 cycle.
@@ -12,13 +12,13 @@ When I stumbled over the [exercism.io rust track](http://exercism.io/languages/r
 to download a rust compiler (thank you [rustup](https://rustup.rs/) for making that a breeze!).
 I spent so long not-starting because I hadn't found a "worthy" use-case for Rust. Exercism helped my conquer
 that hurdle by saying "screw it, at least I'll learn something"
-The exercises may be toy-programs without any practical usefulness, but I think that actually helps: If
+The exercises may be toy-programs without any practical usefulness, but in retrospect I think that actually helps: If
 the problem is trivial, it allows you to really focus on the new language and its pros and cons.
 
 ## Why rust?
 Learning Rust is not easy, but I'd say it is definitely easier than learning to _debug_ an equivalent c/c++ program.
 the rust compiler and borrowck force you to handle problems at the start, instead of when the bug decides to surface
-(such as that-one-race-condition-that-only-triggers-on-mondays-whose-day_of_month-is-divisible-by-zero, or
+(such as that-one-race-condition-that-only-triggers-on-mondays-whose-day_of_month-is-divisible-by-three, or
 that-strange-exception-that-keeps-showing-up-in-the-log-but-that-you-never-could-pin-down)
 
 ## Failure _IS_ an option
