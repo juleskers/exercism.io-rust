@@ -8,7 +8,7 @@ pub fn score(word: &str) -> u16 {
   let mut prev_score = 0;
 
   // to keep iteration simple, we reduce the ':double' and ':triple' tokens to a single char
-  let tokenised = word.to_lowercase().replace(":double", "2");
+  let tokenised = word.to_lowercase().replace(":double", "2").replace(":triple", "3");
 
   // iterate over the characters in the word
   for the_char in tokenised.chars() {
@@ -21,6 +21,7 @@ pub fn score(word: &str) -> u16 {
       'j'|'x' => 8,
       'q'|'z' => 10,
       '2' => prev_score,   // 'keep' the previous value, so it is added again, doubling the previous char's value
+      '3' => 2*prev_score, // add double the previous value; together with the single value added last time, total multiplier is 3x
       _   => 0, // 'funny' characters, such as accented ones, count for 0
     };
 
