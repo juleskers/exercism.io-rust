@@ -65,5 +65,5 @@ fn single_letter_double_score() {
 
 #[test]
 fn double_scoring_letter_in_a_word() {
-    assert_eq!(score("zo:doulbeo"), 13);
+    assert_eq!(score("zo:doubleo"), 13);
 }
