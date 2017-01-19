@@ -67,3 +67,13 @@ fn single_letter_double_score() {
 fn double_scoring_letter_in_a_word() {
     assert_eq!(score("zo:doubleo"), 13);
 }
+
+#[test]
+fn single_letter_triple_score() {
+    assert_eq!(score("a:triple"), 3);
+}
+
+#[test]
+fn triple_scoring_letter_in_a_word() {
+    assert_eq!(score("zo:tripleo"), 14);
+}
