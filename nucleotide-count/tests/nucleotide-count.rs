@@ -65,7 +65,6 @@ fn test_nucleotide_count_only_guanine() {
 }
 
 #[test]
-#[ignore]
 fn test_nucleotide_count_counts_all() {
     check_dna(
         "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAA\
@@ -74,7 +73,6 @@ fn test_nucleotide_count_counts_all() {
 }
 
 #[test]
-#[ignore]
 fn counts_invalid_nucleotide_results_in_err() {
     assert!(dna::nucleotide_counts("GGXXX").is_err());
 }
