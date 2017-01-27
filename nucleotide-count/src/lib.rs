@@ -5,3 +5,7 @@
 pub fn count(nucleotide: char, sequence: &str)-> Result<usize, String> {
     unimplemented!();
 }
+
+pub fn nucleotide_counts(sequence: &str) -> Result<(), String> {
+    unimplemented!();
+}
