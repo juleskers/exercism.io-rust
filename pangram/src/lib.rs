@@ -3,11 +3,6 @@
 // https://github.com/juleskers/exercism.io-rust
 
 pub fn is_pangram(candidate: &str) -> bool {
-    // fail fast on simple cases
-    if candidate.is_empty() {
-        return false;
-    }
-
     let candidate_normalised = candidate.to_lowercase();
 
     let alphabet = "abcdefghijklmnopqrstuvwxyz";
