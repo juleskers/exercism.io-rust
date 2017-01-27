@@ -17,7 +17,7 @@ pub fn count(nucleotide: char, sequence: &str)-> Result<usize, String> {
     for s in sequence.chars() {
         validate(s).is_ok().ok_or(format!("Invalid nucleotide in sequence: '{}', expected one of A, T, G or C", nucleotide))?;
 
-        count += 1;
+        if s == nucleotide { count += 1; }
     }
 
     Ok(count)
