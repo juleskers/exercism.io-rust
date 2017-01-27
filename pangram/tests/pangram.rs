@@ -61,3 +61,33 @@ fn non_ascii_characters_can_be_in_pangrams() {
     let sentence = "Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich.";
     assert!(is_pangram(&sentence));
 }
+
+#[test]
+fn every_single_alphabet_letter_should_be_present() {
+    assert!(!is_pangram(" bcdefghijklmnopqrstuvwxyz"));
+    assert!(!is_pangram("a cdefghijklmnopqrstuvwxyz"));
+    assert!(!is_pangram("ab defghijklmnopqrstuvwxyz"));
+    assert!(!is_pangram("abc efghijklmnopqrstuvwxyz"));
+    assert!(!is_pangram("abcd fghijklmnopqrstuvwxyz"));
+    assert!(!is_pangram("abcde ghijklmnopqrstuvwxyz"));
+    assert!(!is_pangram("abcdef hijklmnopqrstuvwxyz"));
+    assert!(!is_pangram("abcdefg ijklmnopqrstuvwxyz"));
+    assert!(!is_pangram("abcdefgh jklmnopqrstuvwxyz"));
+    assert!(!is_pangram("abcdefghi klmnopqrstuvwxyz"));
+    assert!(!is_pangram("abcdefghij lmnopqrstuvwxyz"));
+    assert!(!is_pangram("abcdefghijk mnopqrstuvwxyz"));
+    assert!(!is_pangram("abcdefghijkl nopqrstuvwxyz"));
+    assert!(!is_pangram("abcdefghijklm opqrstuvwxyz"));
+    assert!(!is_pangram("abcdefghijklmn pqrstuvwxyz"));
+    assert!(!is_pangram("abcdefghijklmno qrstuvwxyz"));
+    assert!(!is_pangram("abcdefghijklmnop rstuvwxyz"));
+    assert!(!is_pangram("abcdefghijklmnopq stuvwxyz"));
+    assert!(!is_pangram("abcdefghijklmnopqr tuvwxyz"));
+    assert!(!is_pangram("abcdefghijklmnopqrs uvwxyz"));
+    assert!(!is_pangram("abcdefghijklmnopqrst vwxyz"));
+    assert!(!is_pangram("abcdefghijklmnopqrstu wxyz"));
+    assert!(!is_pangram("abcdefghijklmnopqrstuv xyz"));
+    assert!(!is_pangram("abcdefghijklmnopqrstuvw yz"));
+    assert!(!is_pangram("abcdefghijklmnopqrstuvwx z"));
+    assert!(!is_pangram("abcdefghijklmnopqrstuvwxy "));
+}
