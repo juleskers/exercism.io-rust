@@ -28,5 +28,11 @@ fn validate(nuc: char) -> Result<(), ()> {
 }
 
 pub fn nucleotide_counts(sequence: &str) -> Result<HashMap<char, usize>, String> {
-    Ok(HashMap::new())
+    let mut counts = HashMap::with_capacity(4);
+    counts.insert('A', 0);
+    counts.insert('T', 0);
+    counts.insert('G', 0);
+    counts.insert('C', 0);
+
+    Ok(counts)
 }

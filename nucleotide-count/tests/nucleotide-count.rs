@@ -51,7 +51,6 @@ fn counts_returns_result() {
 }
 
 #[test]
-#[ignore]
 fn test_nucleotide_count_empty() {
     check_dna(
         "",
