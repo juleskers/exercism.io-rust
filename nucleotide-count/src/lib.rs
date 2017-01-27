@@ -15,7 +15,7 @@ pub fn count(nucleotide: char, sequence: &str)-> Result<usize, String> {
     )?;
 
     nucleotide_counts(sequence).and_then(|nc|
-        Ok(nc.get(nucleotide)
+        Ok(nc.get(&nucleotide)
           .expect("Programmer Error: valid nucleotide not present in count result!"))
     )
 }
