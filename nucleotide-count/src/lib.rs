@@ -30,7 +30,9 @@ pub fn nucleotide_counts(sequence: &str) -> Result<HashMap<char, usize>, String>
     counts.insert('C', 0);
 
     for s in sequence.chars() {
-        validate(s).is_ok().ok_or(format!("Invalid nucleotide in sequence: '{}', expected one of A, T, G or C", s))?;
+        validate(s).or(Err(
+            format!("Invalid nucleotide in sequence: '{}', expected one of A, T, G or C", s)
+        ))?;
 
         *(counts.get_mut(&s)
         .expect("Programmer error: valid nucleotide not present in counts-map"))
