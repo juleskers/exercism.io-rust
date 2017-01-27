@@ -5,7 +5,7 @@
 use std::collections::HashMap;
 
 pub fn count(nucleotide: char, sequence: &str)-> Result<usize, String> {
-    unimplemented!();
+    Ok(0)
 }
 
 pub fn nucleotide_counts(sequence: &str) -> Result<HashMap<char, usize>, String> {
