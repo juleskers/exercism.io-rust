@@ -5,7 +5,7 @@
 use std::collections::HashMap;
 
 pub fn count(nucleotide: char, sequence: &str)-> Result<usize, String> {
-    if "ATGC".contains(nucleotide) {
+    if !"ATGC".contains(nucleotide) {
         return Err(format!("Invalid nucleotide '{}', expected one of A, T, G or C", nucleotide));
     }
     Ok(0)
