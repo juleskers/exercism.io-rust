@@ -8,6 +8,12 @@ pub fn count(nucleotide: char, sequence: &str)-> Result<usize, String> {
     if !"ATGC".contains(nucleotide) {
         return Err(format!("Invalid nucleotide '{}', expected one of A, T, G or C", nucleotide));
     }
+
+    for s in sequence.chars() {
+        if !"ATGC".contains(s) {
+            return Err(format!("Invalid nucleotide in sequence: '{}', expected one of A, T, G or C", s));
+        }
+    }
     Ok(0)
 }
 
