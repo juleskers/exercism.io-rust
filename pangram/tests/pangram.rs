@@ -14,7 +14,6 @@ fn classic_pangram_is_a_pangram() {
     assert!(is_pangram(&sentence));
 }
 
-#[test]
 fn pangrams_must_have_all_letters() {
     let sentence = "a quick movement of the enemy will jeopardize five gunboats";
     assert!(!is_pangram(&sentence));
