@@ -9,7 +9,6 @@ fn empty_strings_are_not_pangrams() {
 }
 
 #[test]
-#[ignore]
 fn classic_pangram_is_a_pangram() {
     let sentence = "the quick brown fox jumps over the lazy dog";
     assert!(is_pangram(&sentence));
