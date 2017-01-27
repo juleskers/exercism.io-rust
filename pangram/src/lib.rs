@@ -4,6 +4,7 @@
 
 pub fn is_pangram(candidate: &str) -> bool {
     if candidate.is_empty() 
+            || !candidate.contains('e')
             || !candidate.contains('x')
             || !candidate.contains('z') {
         return false;
