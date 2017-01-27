@@ -21,7 +21,6 @@ fn count_returns_result() {
 }
 
 #[test]
-#[ignore]
 fn test_count_empty() {
     assert_eq!(dna::count('A', "").unwrap(), 0);
 }
