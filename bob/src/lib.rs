@@ -1,3 +1,6 @@
+// See the complete history of this exercise @ my github diary repo:
+// https://github.com/juleskers/exercism.io-rust/
+
 pub fn reply(phrase: &str) ->  &'static str {
   // Third attempt, reducing the type signature.
   //   the literals in the test assertions can be compiled into either a &str or String thanks to the std Into<> Trait.
