@@ -8,8 +8,6 @@ use std::collections::HashMap;
 use boolinator::Boolinator;
 
 pub fn count(nucleotide: char, sequence: &str)-> Result<usize, String> {
-    let mut count = 0;
-
     validate(nucleotide).or (
         Err(format!("Invalid nucleotide '{}', expected one of A, T, G or C", nucleotide))
     )?;
