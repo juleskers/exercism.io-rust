@@ -2,6 +2,6 @@
 // experiences and conversations with the compiler at my github diary "Learning Rust":
 // https://github.com/juleskers/exercism.io-rust/tree/master/nucleotide-count/src/lib.rs
 
-fn count() {
+fn count(nucleotide: char, sequence: &str) {
     unimplemented!();
 }
