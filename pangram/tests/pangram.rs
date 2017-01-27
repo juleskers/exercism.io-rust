@@ -27,7 +27,6 @@ fn pangrams_must_have_all_letters_two() {
 }
 
 #[test]
-#[ignore]
 fn pangrams_must_include_z() {
     let sentence = "the quick brown fox jumps over the lay dog";
     assert!(!is_pangram(&sentence));
