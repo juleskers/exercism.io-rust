@@ -26,18 +26,23 @@ fn validate(nuc: char) -> Result<(), ()> {
 
 /// Returns the counts of all nucleotides (A,T,G,C) in the sequence
 pub fn nucleotide_counts(sequence: &str) -> Result<HashMap<char, usize>, String> {
+    // prepare our counts map
     let mut counts = HashMap::with_capacity(4);
     counts.insert('A', 0);
     counts.insert('T', 0);
     counts.insert('G', 0);
     counts.insert('C', 0);
 
+    // Check our entire sequence...
     for s in sequence.chars() {
+        // Check if the current position is OK, or bail out (with the '?' syntax)
         validate(s).or(Err(
             format!("Invalid nucleotide in sequence: '{}', expected one of A, T, G or C", s)
         ))?;
 
+        // increase the correct count
         *(counts.get_mut(&s)
+        // expect should never trigger, since we validated the sequence char, and we hardcoded the four map-entries
         .expect("Programmer error: valid nucleotide not present in counts-map"))
         += 1;
     }
