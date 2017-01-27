@@ -5,10 +5,10 @@
 use std::collections::HashMap;
 
 pub fn count(nucleotide: char, sequence: &str)-> Result<usize, String> {
-    
-    if valid_nucleotide(nucleotide).is_err() {
-        return Err(format!("Invalid nucleotide '{}', expected one of A, T, G or C", nucleotide));
-    }
+
+    valid_nucleotide(nucleotide).or (
+        Err(format!("Invalid nucleotide '{}', expected one of A, T, G or C", nucleotide))
+    )?;
 
     if sequence.chars().any(|s| valid_nucleotide(s).is_err()) {
         return Err(format!("Invalid nucleotide in sequence: '{}', expected one of A, T, G or C", nucleotide));
