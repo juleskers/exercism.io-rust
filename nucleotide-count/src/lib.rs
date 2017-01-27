@@ -28,5 +28,5 @@ fn validate(nuc: char) -> Result<(), ()> {
 }
 
 pub fn nucleotide_counts(sequence: &str) -> Result<HashMap<char, usize>, String> {
-    unimplemented!();
+    Ok(HashMap::new())
 }
