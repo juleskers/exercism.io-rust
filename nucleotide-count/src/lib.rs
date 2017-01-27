@@ -6,6 +6,6 @@ pub fn count(nucleotide: char, sequence: &str)-> Result<usize, String> {
     unimplemented!();
 }
 
-pub fn nucleotide_counts(sequence: &str) -> Result<(), String> {
+pub fn nucleotide_counts(sequence: &str) -> Result<HashMap<char, usize>, String> {
     unimplemented!();
 }
