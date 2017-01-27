@@ -26,7 +26,6 @@ fn test_count_empty() {
 }
 
 #[test]
-#[ignore]
 fn count_invalid_nucleotide() {
     assert!(dna::count('X', "A").is_err());
 }
