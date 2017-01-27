@@ -1,3 +1,6 @@
 [package]
 name = "nucleotide-count"
 version = "0.0.0"
+
+[dependencies]
+boolinator = "2.4.0"
