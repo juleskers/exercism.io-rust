@@ -51,7 +51,6 @@ fn numbers_can_not_replace_letters() {
 }
 
 #[test]
-#[ignore]
 fn capitals_and_punctuation_can_be_in_pangrams() {
     let sentence = "\"Five quacking Zephyrs jolt my wax bed.\"";
     assert!(is_pangram(&sentence));

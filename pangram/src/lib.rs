@@ -5,8 +5,9 @@
 pub fn is_pangram(candidate: &str) -> bool {
     if candidate.is_empty() 
             || !candidate.contains('e')
+            || !candidate.contains('p')
             || !candidate.contains('x')
-            || !candidate.contains('z') {
+            || !candidate.to_lowercase().contains('z') {
         return false;
     } else {
         true
