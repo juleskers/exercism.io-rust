@@ -33,14 +33,12 @@ fn pangrams_must_include_z() {
 }
 
 #[test]
-#[ignore]
 fn underscores_do_not_affect_pangrams() {
     let sentence = "the_quick_brown_fox_jumps_over_the_lazy_dog";
     assert!(is_pangram(&sentence));
 }
 
 #[test]
-#[ignore]
 fn numbers_do_not_affect_pangrams() {
     let sentence = "the 1 quick brown fox jumps over the 2 lazy dogs";
     assert!(is_pangram(&sentence));
