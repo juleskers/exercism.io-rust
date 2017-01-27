@@ -36,7 +36,6 @@ fn count_invalid_dna() {
 }
 
 #[test]
-#[ignore]
 fn test_count_repetitive_cytosine() {
     assert_eq!(dna::count('C', "CCCCC").unwrap(), 5);
 }
