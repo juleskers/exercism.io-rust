@@ -3,7 +3,9 @@
 // https://github.com/juleskers/exercism.io-rust
 
 pub fn is_pangram(candidate: &str) -> bool {
-    if candidate.is_empty() || !candidate.contains('x') || !candidate.contains('z') {
+    if candidate.is_empty() 
+            || !candidate.contains('x')
+            || !candidate.contains('z') {
         return false;
     } else {
         true
