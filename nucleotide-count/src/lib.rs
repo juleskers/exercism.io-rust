@@ -7,6 +7,7 @@ extern crate boolinator;
 use std::collections::HashMap;
 use boolinator::Boolinator;
 
+/// Counts the occurances of a given Nucleotide (A,T,G,C) in a sequence
 pub fn count(nucleotide: char, sequence: &str)-> Result<usize, String> {
     validate(nucleotide).or (
         Err(format!("Invalid nucleotide '{}', expected one of A, T, G or C", nucleotide))
@@ -18,10 +19,12 @@ pub fn count(nucleotide: char, sequence: &str)-> Result<usize, String> {
     )
 }
 
+/// Checks if a character is a valid nucleotide (A,T,G,C)
 fn validate(nuc: char) -> Result<(), ()> {
     "ATGC".contains(nuc).as_result((),())
 }
 
+/// Returns the counts of all nucleotides (A,T,G,C) in the sequence
 pub fn nucleotide_counts(sequence: &str) -> Result<HashMap<char, usize>, String> {
     let mut counts = HashMap::with_capacity(4);
     counts.insert('A', 0);
