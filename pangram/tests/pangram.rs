@@ -21,7 +21,6 @@ fn pangrams_must_have_all_letters() {
 }
 
 #[test]
-#[ignore]
 fn pangrams_must_have_all_letters_two() {
     let sentence = "the quick brown fish jumps over the lazy dog";
     assert!(!is_pangram(&sentence));
