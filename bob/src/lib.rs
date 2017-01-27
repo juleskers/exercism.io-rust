@@ -6,8 +6,8 @@ pub fn reply(phrase: &str) ->  &'static str {
   //   Even more general would be to use "Into<&str>" like we did before.
 
   match phrase {
-    ref p if p.is_empty()          => "Fine. Be that way!",
-    ref p if p.ends_with("?")      => "Sure.",
+    p if p.is_empty()          => "Fine. Be that way!",
+    p if p.ends_with("?")      => "Sure.",
     p if p == p.to_uppercase() => "Whoa, chill out!",
     _ => "Whatever."
   }
