@@ -21,11 +21,7 @@ pub fn count(nucleotide: char, sequence: &str)-> Result<usize, String> {
 }
 
 fn validate(nuc: char) -> Result<(), ()> {
-    if "ATGC".contains(nuc) {
-        Ok(())
-    } else {
-        Err(())
-    }
+    "ATGC".contains(nuc).as_result((),())
 }
 
 pub fn nucleotide_counts(sequence: &str) -> Result<HashMap<char, usize>, String> {
