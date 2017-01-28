@@ -15,7 +15,9 @@ pub fn count(nucleotide: char, sequence: &str)-> Result<usize, String> {
 
     nucleotide_counts(sequence).and_then(|nc|
         Ok(*nc.get(&nucleotide)
-          .expect("Programmer Error: valid nucleotide not present in count result!"))
+            // This expect should never trigger, since we validated the nucleotide, and the nc-map
+            // has hardcoded content for all four nucleotides.
+            .expect("Programmer Error: valid nucleotide not present in count result!"))
     )
 }
 
