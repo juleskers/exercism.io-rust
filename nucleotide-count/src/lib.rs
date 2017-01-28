@@ -29,7 +29,7 @@ fn validate(nuc: char) -> Result<(), ()> {
 /// Returns the counts of all nucleotides (A,T,G,C) in the sequence
 pub fn nucleotide_counts(sequence: &str) -> Result<HashMap<char, usize>, String> {
     // prepare our counts map from an array literal
-    let mut counts = [
+    let mut counts: HashMap<char, usize> = [
         ('A', 0),
         ('T', 0),
         ('G', 0),
