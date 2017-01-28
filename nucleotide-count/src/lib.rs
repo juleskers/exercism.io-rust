@@ -28,12 +28,13 @@ fn validate(nuc: char) -> Result<(), ()> {
 
 /// Returns the counts of all nucleotides (A,T,G,C) in the sequence
 pub fn nucleotide_counts(sequence: &str) -> Result<HashMap<char, usize>, String> {
-    // prepare our counts map
-    let mut counts = HashMap::with_capacity(4);
-    counts.insert('A', 0);
-    counts.insert('T', 0);
-    counts.insert('G', 0);
-    counts.insert('C', 0);
+    // prepare our counts map from an array literal
+    let mut counts: HashMap<char, usize> = [
+        ('A', 0),
+        ('T', 0),
+        ('G', 0),
+        ('C', 0),
+    ].iter().cloned().collect();
 
     // Check our entire sequence...
     for s in sequence.chars() {
