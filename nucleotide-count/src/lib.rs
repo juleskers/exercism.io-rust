@@ -2,6 +2,9 @@
 // experiences and conversations with the compiler at my github diary "Learning Rust":
 // https://github.com/juleskers/exercism.io-rust/tree/master/nucleotide-count/src/lib.rs
 
+// my first intentional use of a crates.io crate!
+// Boolinator provides lovely Result/Option-style combinators (.or(), .and_then(), etc)
+// also on raw boolean values true/false
 extern crate boolinator;
 
 use std::collections::HashMap;
