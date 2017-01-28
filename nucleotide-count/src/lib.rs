@@ -41,7 +41,7 @@ pub fn nucleotide_counts(sequence: &str) -> Result<HashMap<char, usize>, String>
 
     // Check our entire sequence...
     for s in sequence.chars() {
-        // Check if the current position is OK, or bail out (with the '?' syntax)
+        // Check if the current position is OK, or bail out (with the new '?' syntax, shorter form of 'try!()')
         validate(s).or(Err(
             format!("Invalid nucleotide in sequence: '{}', expected one of A, T, G or C", s)
         ))?;
